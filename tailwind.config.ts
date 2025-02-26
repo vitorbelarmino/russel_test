@@ -11,6 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        logitechColor: "#EFEFEF",
+        bluePrimary: "#00B5EA",
+        blueSecundary: "#0085AC",
+        grayPrimary: "#CCCCCC",
+      },
+      backgroundImage: {
+        "logitech-gradient": "linear-gradient(180deg, #020202 0%, #00161D 100%)",
       },
     },
   },

@@ -1,3 +1,9 @@
+import Promotions from "./components/Promotions";
+
 export default function Home() {
-  return <div>Hello World</div>;
+  return (
+    <div>
+      <Promotions />
+    </div>
+  );
 }
