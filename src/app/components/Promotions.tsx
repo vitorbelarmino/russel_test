@@ -29,8 +29,8 @@ export default function Promotions() {
               </p>
             </div>
 
-            <Button className="bg-bluePrimary hover:bg-grayPrimary transition p-2 text-black text-xl font-bold">
-              Comprar
+            <Button className="bg-bluePrimary hover:bg-grayPrimary transition-all hover:p-[9px] hover:m-0 m-[1px] cursor-default p-2 text-black text-xl font-bold">
+              COMPRAR
             </Button>
           </div>
         ))}

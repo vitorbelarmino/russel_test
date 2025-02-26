@@ -39,11 +39,11 @@ export default function Carousel({ products }: Iprops) {
       modules={[Pagination]}
       slidesPerView={slides}
       spaceBetween={width < 640 ? 16 : 24}
-      className="w-full border-2 border-grayPrimary"
+      className="w-full"
     >
       {products.map((product, i) => (
         <SwiperSlide key={i}>
-          <div className="flex flex-col gap-4 p-4 text-blackSecundary hover:bg-graySecundary min-w-[164px] min-h-[372px] md:min-w-[232px] md:min-h-[455px]">
+          <div className="flex flex-col gap-4 p-4 text-blackSecundary hover:bg-graySecundary">
             <Image sizes="132" src={product.image} className="w-full rounded-xl" alt="Slide" />
             <p className="font-bold text-sm line-clamp-2 sm:text-base sm:line-clamp-3">
               {product.name}
@@ -55,8 +55,8 @@ export default function Carousel({ products }: Iprops) {
               <p className="text-purplePrimary text-xs sm:text-sm">{`com ${product.discountPix}% de desconto no PIX`}</p>
             </div>
 
-            <Button className="bg-purpleSecundary hover:bg-purplePrimary text-white p-2 font-bold">
-              Comprar
+            <Button className="bg-purpleSecundary hover:bg-purplePrimary text-white p-2 font-bold cursor-default">
+              COMPRAR
             </Button>
           </div>
         </SwiperSlide>
