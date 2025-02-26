@@ -1,15 +1,16 @@
+"use client";
 import Image from "next/image";
 import { bannerImage } from "../assets";
-import { products } from "../mocks/products";
+import { promotions } from "../mocks/products";
 import { Button } from "./Button";
 
-const Promotions = () => {
+export default function Promotions() {
   return (
-    <div className="flex flex-col p-2 gap-2 md:p-10 md:gap-10 xl:px-32 justify-center bg-black ">
+    <div className="flex flex-col p-2 md:p-10 xl:px-32 gap-2 md:gap-10 justify-center bg-blackPrimary ">
       <Image src={bannerImage} alt="Promotions" />
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10 w-full ">
-        {products.map((product, index) => (
+        {promotions.map((product, index) => (
           <div
             key={index}
             className="flex flex-col justify-around bg-logitech-gradient gap-4 p-4 sm:p-6 w-full rounded-md"
@@ -36,6 +37,4 @@ const Promotions = () => {
       </div>
     </div>
   );
-};
-
-export default Promotions;
+}
