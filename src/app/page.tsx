@@ -1,11 +1,11 @@
 "use client";
 import Products from "./components/Products";
-import Promotions from "./components/Promotions";
+import Highlight from "./components/Highlights";
 
 export default function Home() {
   return (
     <div className="flex flex-col justify-center gap-10 sm:gap-20 bg-grayTertiary">
-      <Promotions />
+      <Highlight />
       <Products />
     </div>
   );

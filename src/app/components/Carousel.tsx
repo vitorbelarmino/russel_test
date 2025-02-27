@@ -15,9 +15,9 @@ interface Iprops {
 
 export default function Carousel({ products }: Iprops) {
   const [slides, setSlides] = useState(5);
+  const [loading, setLoading] = useState(true);
   const { width } = useWindowSize();
   useEffect(() => {
-    console.log(width);
     const getQuantitySlides = () => {
       if (width === 0) return 5;
       if (width < 640) return 2;
@@ -26,9 +26,10 @@ export default function Carousel({ products }: Iprops) {
       if (width < 1280) return 4;
       return 5;
     };
-    console.log(getQuantitySlides());
     setSlides(getQuantitySlides());
+    setLoading(false);
   }, [width]);
+  if (loading) return null;
   return (
     <Swiper
       modules={[Pagination]}

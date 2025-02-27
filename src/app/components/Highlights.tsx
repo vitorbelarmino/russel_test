@@ -4,14 +4,14 @@ import { bannerImage } from "../assets";
 import { products } from "../mocks/products";
 import { Button } from "./Button";
 
-export default function Promotions() {
-  const promotions = products.filter((product) => product.highlight);
+export default function Highlight() {
+  const highlight = products.filter((product) => product.highlight);
   return (
     <div className="flex flex-col p-2 md:p-10 xl:px-32 gap-2 md:gap-10 justify-center bg-blackPrimary ">
-      <Image src={bannerImage} alt="Promotions" />
+      <Image src={bannerImage} alt="highlights" />
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center gap-10 w-full ">
-        {promotions.map((product, index) => (
+        {highlight.map((product, index) => (
           <div
             key={index}
             className="flex flex-col justify-around bg-logitech-gradient gap-4 p-4 sm:p-6 w-full rounded-md"
