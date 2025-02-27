@@ -1,4 +1,4 @@
-# NoteApp
+# Russel
 
 ## 💻 Projeto
   Este projeto é a homepage de um site de vendas, desenvolvida para fornecer uma experiência moderna, respansiva e intuitiva para os usuários.
