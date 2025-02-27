@@ -28,7 +28,7 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
     getId();
   }, []);
   return (
-    <div className="body bg-grayTertiary flex flex-col lg:flex-row items-center gap-10 px-4 py-8 xl:px-16 xl:py-[120px]">
+    <div className="body bg-grayTertiary flex flex-col lg:flex-row items-center gap-10 px-4 py-8 xl:px-16 xl:py-[120px] cursor-default">
       {product && (
         <>
           <div className="sm:w-1/2 lg:w-full xl:w-full max-w-[624px]">
@@ -52,11 +52,11 @@ export default function ProductDetails({ params }: ProductDetailsProps) {
                 <p>à vista no PIX</p>
               </div>
             </div>
-            <div className="buttons flex flex-col lg:flex-row gap-4">
-              <Button className="bg-purpleSecundary px-6 py-3 text-xl font-bold text-grayTertiary">
+            <div className="buttons flex flex-col lg:flex-row gap-4 ">
+              <Button className="bg-purpleSecundary hover:bg-purplePrimary px-6 py-3 text-xl font-bold text-grayTertiary cursor-default m-[1px] hover:m-0 hover:px-[25px] hover:py-[13px]">
                 COMPRAR
               </Button>
-              <Button className="bg-grayTertiary px-6 py-3 text-xl font-bold text-purpleSecundary border-purpleSecundary border-[1px]">
+              <Button className="bg-grayTertiary hover:bg-purplePrimary px-6 py-3 text-xl font-bold text-purpleSecundary border-purpleSecundary border-[1px] cursor-default">
                 ADICIONAR AO CARRINHO
               </Button>
             </div>

@@ -3,8 +3,13 @@ import Image from "next/image";
 import { bannerImage } from "../assets";
 import { products } from "../mocks/products";
 import { Button } from "./Button";
+import { useRouter } from "next/navigation";
 
 export default function Highlight() {
+  const router = useRouter();
+  const handleBuyClick = (productId: number) => {
+    router.push(`/product/${productId}`);
+  };
   const highlight = products.filter((product) => product.highlight);
   return (
     <div className="flex flex-col p-2 md:p-10 xl:px-32 gap-2 md:gap-10 justify-center bg-blackPrimary ">
@@ -14,7 +19,7 @@ export default function Highlight() {
         {highlight.map((product, index) => (
           <div
             key={index}
-            className="flex flex-col justify-around bg-logitech-gradient gap-4 p-4 sm:p-6 w-full rounded-md"
+            className="flex flex-col justify-around bg-logitech-gradient gap-4 p-4 sm:p-6 w-full rounded-md cursor-default"
           >
             <Image src={product.image} alt={product.name} />
             {product.brandLogo && <Image src={product.brandLogo} alt={product.name} />}
@@ -30,7 +35,10 @@ export default function Highlight() {
               </p>
             </div>
 
-            <Button className="bg-bluePrimary hover:bg-grayPrimary transition-all hover:p-[9px] hover:m-0 m-[1px] cursor-default p-2 text-black text-xl font-bold">
+            <Button
+              onClick={() => handleBuyClick(product.id)}
+              className="bg-bluePrimary hover:bg-grayPrimary transition-all hover:p-[9px] hover:m-0 m-[1px] cursor-default p-2 text-black text-xl font-bold"
+            >
               COMPRAR
             </Button>
           </div>

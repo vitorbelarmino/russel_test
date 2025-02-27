@@ -8,6 +8,7 @@ import { Button } from "./Button";
 import { useWindowSize } from "../utils/useWindowSize";
 import { useEffect, useState } from "react";
 import { IProduct } from "../interfaces/products";
+import { useRouter } from "next/navigation";
 
 interface Iprops {
   products: IProduct[];
@@ -17,6 +18,10 @@ export default function Carousel({ products }: Iprops) {
   const [slides, setSlides] = useState(5);
   const [loading, setLoading] = useState(true);
   const { width } = useWindowSize();
+  const router = useRouter();
+  const handleBuyClick = (productId: number) => {
+    router.push(`/product/${productId}`);
+  };
   useEffect(() => {
     const getQuantitySlides = () => {
       if (width === 0) return 5;
@@ -39,7 +44,7 @@ export default function Carousel({ products }: Iprops) {
     >
       {products.map((product, i) => (
         <SwiperSlide key={i}>
-          <div className="flex flex-col gap-4 p-4 text-blackSecundary hover:bg-graySecundary">
+          <div className="flex flex-col gap-4 p-4 text-blackSecundary hover:bg-graySecundary cursor-default">
             <Image sizes="132" src={product.image} className="w-full rounded-xl" alt="Slide" />
             <p className="font-bold text-sm line-clamp-2 sm:text-base sm:line-clamp-3">
               {product.name}
@@ -51,7 +56,10 @@ export default function Carousel({ products }: Iprops) {
               <p className="text-purplePrimary text-xs sm:text-sm">{`com ${product.discountPix}% de desconto no PIX`}</p>
             </div>
 
-            <Button className="bg-purpleSecundary hover:bg-purplePrimary text-white p-2 font-bold cursor-default">
+            <Button
+              onClick={() => handleBuyClick(product.id)}
+              className="bg-purpleSecundary hover:bg-purplePrimary text-white p-2 font-bold cursor-default"
+            >
               COMPRAR
             </Button>
           </div>
