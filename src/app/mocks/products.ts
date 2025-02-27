@@ -10,9 +10,9 @@ import {
   placaV5,
   soundbox,
 } from "../assets";
-import { Stock } from "../interfaces/products";
+import { IProduct, Stock } from "../interfaces/products";
 
-const products = [
+const products: IProduct[] = [
   {
     id: 1,
     name: "Mouse Gamer Sem Fio Logitech G Pro X Superlight 2 com Lightspeed, 32000 DPI, Sensor Hero 2, com Bateria Recarregável, Preto",
@@ -21,7 +21,8 @@ const products = [
     image: mouse1,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: true,
+    brandLogo: logitech,
   },
   {
     id: 2,
@@ -31,7 +32,8 @@ const products = [
     image: mouse2,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: true,
+    brandLogo: logitech,
   },
   {
     id: 3,
@@ -41,7 +43,8 @@ const products = [
     image: headset,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: true,
+    brandLogo: logitech,
   },
   {
     id: 4,
@@ -51,7 +54,8 @@ const products = [
     image: soundbox,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: true,
+    brandLogo: logitech,
   },
   {
     id: 5,
@@ -62,7 +66,7 @@ const products = [
     image: placaV1,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: false,
   },
   {
     id: 6,
@@ -73,7 +77,7 @@ const products = [
     image: placaV2,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: false,
   },
   {
     id: 7,
@@ -84,7 +88,7 @@ const products = [
     image: placaV3,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: false,
   },
   {
     id: 8,
@@ -95,7 +99,7 @@ const products = [
     image: placaV4,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: false,
   },
   {
     id: 9,
@@ -106,7 +110,7 @@ const products = [
     image: placaV5,
     seller: "Logitech Brasil",
     stock: Stock.InStock,
-    onSale: true,
+    highlight: false,
   },
 ];
 

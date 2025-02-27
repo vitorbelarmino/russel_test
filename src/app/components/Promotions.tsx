@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import { bannerImage } from "../assets";
-import { promotions } from "../mocks/products";
+import { products } from "../mocks/products";
 import { Button } from "./Button";
 
 export default function Promotions() {
+  const promotions = products.filter((product) => product.highlight);
   return (
     <div className="flex flex-col p-2 md:p-10 xl:px-32 gap-2 md:gap-10 justify-center bg-blackPrimary ">
       <Image src={bannerImage} alt="Promotions" />
@@ -16,7 +17,7 @@ export default function Promotions() {
             className="flex flex-col justify-around bg-logitech-gradient gap-4 p-4 sm:p-6 w-full rounded-md"
           >
             <Image src={product.image} alt={product.name} />
-            <Image src={product?.brandLogo} alt={product.name} />
+            {product.brandLogo && <Image src={product.brandLogo} alt={product.name} />}
             <p className="text-logitechColor font-bold line-clamp-2 text-sm sm:line-clamp-3 sm:text-base">
               {product.name}
             </p>

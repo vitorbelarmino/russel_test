@@ -13,5 +13,6 @@ export interface IProduct {
   image: StaticImageData;
   seller: string;
   stock: Stock;
-  onSale: boolean;
+  highlight: boolean;
+  brandLogo?: StaticImageData;
 }

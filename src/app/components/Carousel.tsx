@@ -3,19 +3,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Button } from "./Button";
 import { useWindowSize } from "../utils/useWindowSize";
 import { useEffect, useState } from "react";
+import { IProduct } from "../interfaces/products";
 
 interface Iprops {
-  products: {
-    name: string;
-    image: StaticImageData;
-    fullPrice: string;
-    promotionPrice: string;
-    discountPix: number;
-  }[];
+  products: IProduct[];
 }
 
 export default function Carousel({ products }: Iprops) {

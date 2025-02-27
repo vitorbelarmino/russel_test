@@ -1,8 +1,18 @@
 "use client";
 import Carousel from "./Carousel";
 import { products } from "../mocks/products";
+import { useEffect, useState } from "react";
+import { IProduct } from "../interfaces/products";
 
 export default function Products() {
+  const [filtredProducts, setFiltredProducts] = useState<IProduct[]>(products);
+  useEffect(() => {
+    const getProducts = () => {
+      const filtredProducts = products.filter((product) => !product.highlight);
+      setFiltredProducts(filtredProducts);
+    };
+    getProducts();
+  }, []);
   return (
     <div className="flex flex-col gap-4 sm:gap-6 p-4 md:p-10 xl:px-32">
       <div className="flex items-center gap-2 h-5">
@@ -12,7 +22,7 @@ export default function Products() {
         </div>
       </div>
 
-      <Carousel products={products} />
+      <Carousel products={filtredProducts} />
     </div>
   );
 }
