@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { bannerImage } from "../assets";
-import { products } from "../mocks/products";
+import { bannerImage } from "../../assets";
+import { products } from "../../mocks/products";
 import { Button } from "./Button";
 import { useRouter } from "next/navigation";
 

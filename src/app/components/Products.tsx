@@ -1,8 +1,8 @@
 "use client";
 import Carousel from "./Carousel";
-import { products } from "../mocks/products";
+import { products } from "../../mocks/products";
 import { useEffect, useState } from "react";
-import { IProduct } from "../interfaces/products";
+import { IProduct } from "../../interfaces/products";
 
 export default function Products() {
   const [filtredProducts, setFiltredProducts] = useState<IProduct[]>(products);

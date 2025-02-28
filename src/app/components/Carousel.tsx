@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import { Button } from "./Button";
-import { useWindowSize } from "../utils/useWindowSize";
+import { useWindowSize } from "../../utils/useWindowSize";
 import { useEffect, useState } from "react";
-import { IProduct } from "../interfaces/products";
+import { IProduct } from "../../interfaces/products";
 import { useRouter } from "next/navigation";
 
 interface Iprops {

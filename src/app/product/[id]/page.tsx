@@ -1,10 +1,10 @@
 "use client";
-import { IProduct } from "@/app/interfaces/products";
-import { products } from "@/app/mocks/products";
+import { IProduct } from "@/interfaces/products";
+import { products } from "@/mocks/products";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/app/components/Button";
-import { useWindowSize } from "@/app/utils/useWindowSize";
+import { useWindowSize } from "@/utils/useWindowSize";
 
 interface ProductDetailsProps {
   params: Promise<{ id: string }>;
